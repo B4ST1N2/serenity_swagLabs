@@ -1,16 +1,14 @@
 package questions;
 
-import io.cucumber.java.sk.Tak;
+import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.questions.Text;
 import userinterface.PaginaFinish;
-import userinterface.PaginaLogin;
-
 
 public class MensajeAgradecimientoCompra implements Question<String> {
 
+    @Step("Validando mensaje de agradecimiento por la compra")
     @Override
     public String answeredBy(Actor actor) {
         return Text.of(PaginaFinish.MENSAGE_AGRADECIMIENTO).answeredBy(actor);
